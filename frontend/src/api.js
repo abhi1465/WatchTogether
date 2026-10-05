@@ -1,4 +1,6 @@
-const API_BASE = "http://127.0.0.1:8000";
+const API_BASE = (
+  import.meta.env.VITE_API_BASE_URL || "http://127.0.0.1:8000"
+).trim().replace(/\/+$/, "");
 
 export async function apiRequest(path, options = {}) {
   const controller = new AbortController();
@@ -33,7 +35,7 @@ export async function apiRequest(path, options = {}) {
 
     if (error instanceof TypeError) {
       throw new Error(
-        "Cannot reach the backend. Check that Python is running on port 8000."
+        "Cannot reach the recommendation service. Please try again shortly."
       );
     }
 
