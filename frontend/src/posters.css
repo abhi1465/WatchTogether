@@ -1,0 +1,256 @@
+.poster-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 22px;
+  align-items: start;
+}
+
+.poster-card {
+  min-width: 0;
+  overflow: hidden;
+  background: #191a1c;
+  border: 1px solid #353639;
+  border-radius: 18px;
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.poster-card:hover {
+  transform: translateY(-4px);
+  border-color: #a06b52;
+  box-shadow: 0 16px 36px #00000035;
+}
+
+.poster-card-art {
+  position: relative;
+  aspect-ratio: 2 / 3;
+  overflow: hidden;
+  background: #252629;
+}
+
+.poster-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.poster-position {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  display: grid;
+  place-items: center;
+  min-width: 40px;
+  height: 40px;
+  padding: 0 9px;
+  border: 1px solid #ffffff35;
+  border-radius: 12px;
+  background: #101112e8;
+  color: #ffab85;
+  font-size: 1rem;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+}
+
+.poster-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  width: 100%;
+  height: 100%;
+  padding: 30px;
+  text-align: center;
+  background:
+    radial-gradient(circle at 25% 20%, #614333 0, transparent 55%),
+    linear-gradient(145deg, #292c35, #161719);
+}
+
+.poster-placeholder-mark {
+  color: #ffab85;
+  font-size: 3.5rem;
+  font-weight: 900;
+}
+
+.poster-placeholder strong {
+  color: #f4eee8;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+.poster-placeholder > span:last-child {
+  color: #ccc4bf;
+  font-size: 0.8rem;
+}
+
+.poster-loading {
+  animation: poster-pulse 1.6s ease-in-out infinite alternate;
+}
+
+@keyframes poster-pulse {
+  from {
+    opacity: 0.6;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.poster-card-content {
+  padding: 20px;
+}
+
+.poster-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  color: #b7b8c0;
+  font-size: 0.8rem;
+}
+
+.poster-card h3 {
+  margin: 12px 0 16px;
+  color: #f5f2ec;
+  font-size: 1.05rem;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.poster-card .genre-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.poster-card .genre-tag {
+  padding: 5px 8px;
+  border-radius: 5px;
+  background: #292a2e;
+  color: #d9dae0;
+  font-size: 0.72rem;
+}
+
+.poster-synopsis {
+  margin-top: 20px;
+  color: #d4d4da;
+  font-size: 0.85rem;
+}
+
+.poster-synopsis summary {
+  color: #ffb18d;
+  cursor: pointer;
+}
+
+.poster-synopsis p {
+  margin: 12px 0 0;
+  line-height: 1.75;
+}
+
+.poster-source-link {
+  display: inline-block;
+  margin-top: 20px;
+  color: #b9bac3;
+  font-size: 0.75rem;
+  text-decoration: none;
+}
+
+.poster-source-link:hover {
+  color: #ffb18d;
+  text-decoration: underline;
+}
+
+.poster-error {
+  margin-top: 16px;
+  font-size: 0.8rem;
+  color: #c7c7cf;
+}
+
+.poster-error button {
+  padding: 7px 10px;
+  background: #303136;
+  color: #ffb18d;
+  border: 1px solid #48494e;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+.tmdb-credits {
+  margin-top: 48px;
+  padding: 24px;
+  border: 1px solid #303134;
+  border-radius: 16px;
+  background: #17181a;
+}
+
+.tmdb-credits h2 {
+  margin: 0 0 16px;
+  font-size: 1rem;
+  color: #eeeae5;
+}
+
+.tmdb-logo {
+  display: block;
+  width: 110px;
+  height: auto;
+  margin-bottom: 16px;
+}
+
+.tmdb-credits p {
+  margin: 8px 0;
+  color: #b5b6be;
+  font-size: 0.8rem;
+  line-height: 1.7;
+}
+
+.tmdb-credits a {
+  color: #ffb18d;
+}
+
+.poster-card a:focus-visible,
+.poster-card button:focus-visible,
+.poster-card summary:focus-visible {
+  outline: 2px solid #ffab85;
+  outline-offset: 5px;
+}
+
+@media (max-width: 1050px) {
+  .poster-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .poster-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  .poster-card-content {
+    padding: 16px;
+  }
+}
+
+@media (max-width: 420px) {
+  .poster-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .poster-card {
+    transition: none;
+  }
+
+  .poster-card:hover {
+    transform: none;
+  }
+
+  .poster-loading {
+    animation: none;
+  }
+}

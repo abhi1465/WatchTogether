@@ -1,0 +1,297 @@
+.watchlist-navigation-bar {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  width: min(1160px, calc(100% - 48px));
+  margin: 24px auto 0;
+  padding: 0 0 18px;
+  border-bottom: 1px solid #303134;
+}
+
+.watchlist-navigation {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px;
+  border: 1px solid #393a3e;
+  border-radius: 14px;
+  background: #191a1c;
+}
+
+.watchlist-nav-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 46px;
+  padding: 11px 20px;
+  border: 0;
+  border-radius: 10px;
+  background: transparent;
+  color: #bfc0c7;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.watchlist-nav-button:hover {
+  background: #292a2e;
+  color: #ffffff;
+}
+
+.watchlist-nav-button.is-active {
+  background: #ffab85;
+  color: #24170f;
+}
+
+.watchlist-nav-count {
+  display: grid;
+  place-items: center;
+  min-width: 25px;
+  height: 25px;
+  padding: 0 6px;
+  border-radius: 7px;
+  background: #36373c;
+  color: #f0ece7;
+  font-size: 12px;
+  font-variant-numeric: tabular-nums;
+}
+
+.watchlist-nav-button.is-active .watchlist-nav-count {
+  background: #332117;
+  color: #ffe6d9;
+}
+
+.watchlist-navigation-note {
+  color: #96979f;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.13em;
+}
+
+.watchlist-page {
+  box-sizing: border-box;
+  width: min(1160px, calc(100% - 48px));
+  margin: 0 auto;
+  padding: 58px 0 80px;
+}
+
+.watchlist-page-header {
+  margin-bottom: 30px;
+}
+
+.watchlist-page-header h1 {
+  margin: 12px 0 16px;
+  color: #f5f0e9;
+  font-size: clamp(38px, 6vw, 68px);
+  line-height: 1.08;
+  letter-spacing: -0.045em;
+}
+
+.watchlist-page-description {
+  max-width: 620px;
+  color: #b9bac2;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.watchlist-page-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 32px;
+  padding-top: 22px;
+  border-top: 1px solid #343539;
+}
+
+.watchlist-page-count {
+  color: #eee9e2;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.watchlist-page-count > span {
+  color: #999ba5;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.watchlist-discover-button {
+  padding: 11px 16px;
+  border: 1px solid #565057;
+  border-radius: 10px;
+  background: #252428;
+  color: #ffb18d;
+  font-family: inherit;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.watchlist-discover-button:hover {
+  border-color: #ffab85;
+  background: #352820;
+}
+
+.watchlist-save-button {
+  width: 100%;
+  margin-top: 20px;
+  padding: 11px 12px;
+  border: 1px solid #555057;
+  border-radius: 9px;
+  background: #242428;
+  color: #f2eae5;
+  font: inherit;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.watchlist-save-button:hover {
+  border-color: #ffab85;
+  background: #352820;
+}
+
+.watchlist-save-button.is-saved {
+  border-color: #827052;
+  background: #302a20;
+  color: #f8dca8;
+}
+
+.watchlist-saved-badge {
+  position: absolute;
+  top: 16px;
+  right: 12px;
+  padding: 7px 10px;
+  border: 1px solid #ffffff30;
+  border-radius: 8px;
+  background: #171510eb;
+  color: #f8dca8;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.watchlist-empty {
+  padding: 65px 24px;
+  border: 1px dashed #514640;
+  border-radius: 20px;
+  background:
+    radial-gradient(ellipse at top, #35261d70, transparent 70%),
+    #17181a;
+  text-align: center;
+}
+
+.watchlist-empty > span {
+  display: block;
+  margin-bottom: 20px;
+  color: #ffab85;
+  font-size: 64px;
+  font-weight: 900;
+}
+
+.watchlist-empty h2 {
+  color: #f5eee7;
+  font-size: 25px;
+}
+
+.watchlist-empty p {
+  max-width: 480px;
+  margin: 14px auto;
+  color: #b5b6be;
+  line-height: 1.8;
+}
+
+.watchlist-empty button {
+  margin-top: 20px;
+  padding: 13px 20px;
+  border: 0;
+  border-radius: 10px;
+  background: #ffab85;
+  color: #20150f;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.watchlist-bottom-note {
+  margin: 28px 0 0;
+  color: #b5b6be;
+  font-size: 0.85rem;
+  line-height: 1.7;
+}
+
+.watchlist-notifications {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 80;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: min(380px, calc(100vw - 32px));
+  pointer-events: none;
+}
+
+.watchlist-feedback {
+  margin: 0;
+  padding: 14px 18px;
+  border: 1px solid #79604d;
+  border-radius: 12px;
+  background: #29231f;
+  color: #f5e5d6;
+  font-size: 14px;
+  line-height: 1.6;
+  box-shadow: 0 10px 30px #00000055;
+  pointer-events: auto;
+}
+
+.watchlist-feedback.is-error {
+  border-color: #ab7164;
+  background: #382622;
+}
+
+.watchlist-nav-button:focus-visible,
+.watchlist-discover-button:focus-visible,
+.watchlist-save-button:focus-visible,
+.watchlist-empty button:focus-visible {
+  outline: 2px solid #ffab85;
+  outline-offset: 4px;
+}
+
+@media (max-width: 600px) {
+  .watchlist-navigation-bar {
+    width: calc(100% - 32px);
+    margin-top: 16px;
+  }
+
+  .watchlist-navigation {
+    width: 100%;
+  }
+
+  .watchlist-nav-button {
+    flex: 1;
+    padding: 11px 14px;
+  }
+
+  .watchlist-navigation-note {
+    display: none;
+  }
+
+  .watchlist-page {
+    width: calc(100% - 32px);
+    padding-top: 36px;
+  }
+
+  .watchlist-page-toolbar {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .watchlist-notifications {
+    right: 16px;
+    bottom: 16px;
+  }
+}

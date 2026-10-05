@@ -1,0 +1,135 @@
+.genre-control {
+  margin: 22px 0;
+  padding-top: 20px;
+  border-top: 1px solid #3b3c40;
+}
+
+.genre-picker {
+  position: relative;
+}
+
+.genre-label {
+  display: block;
+  margin-bottom: 12px;
+  color: #eeeae5;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.genre-picker .genre-trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  width: 100%;
+  min-height: 64px;
+  padding: 14px 18px;
+  border: 1px solid #68636b;
+  border-radius: 12px;
+  background: #111214;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.4;
+  text-align: left;
+  cursor: pointer;
+}
+
+.genre-chevron {
+  flex-shrink: 0;
+  color: #ffab85;
+  font-size: 24px;
+}
+
+.genre-trigger:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.genre-trigger:focus-visible,
+.genre-options:focus-visible {
+  outline: 2px solid #ffab85;
+  outline-offset: 3px;
+}
+
+.genre-options {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  right: 0;
+  z-index: 60;
+  max-height: min(360px, 45vh);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: 6px;
+  border: 1px solid #69616a;
+  border-radius: 12px;
+  background: #202124;
+  box-shadow: 0 18px 45px #00000080;
+  scrollbar-width: thin;
+  scrollbar-color: #8b7c72 #202124;
+}
+
+.genre-picker .genre-option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 54px;
+  padding: 12px 14px;
+  border-radius: 7px;
+  color: #f7f3ef;
+  font-family: inherit;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1.4;
+  cursor: pointer;
+  scroll-margin: 6px;
+}
+
+.genre-option.is-selected {
+  color: #ffbc98;
+  font-weight: 700;
+}
+
+.genre-option.is-active {
+  background: #493429;
+  color: #ffffff;
+}
+
+.genre-control .privacy-note {
+  margin-bottom: 0;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.genre-load-error {
+  margin-top: 12px;
+  color: #e8c0aa;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.genre-load-error button {
+  margin-left: 8px;
+  padding: 7px 11px;
+  border: 1px solid #555057;
+  border-radius: 6px;
+  background: #292a2e;
+  color: #ffb18d;
+  font-family: inherit;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.results-filter-badge {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 7px 12px;
+  border: 1px solid #78553f;
+  border-radius: 20px;
+  background: #30251f;
+  color: #ffbd99;
+  font-size: 14px;
+}

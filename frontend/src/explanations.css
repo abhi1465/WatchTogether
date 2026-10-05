@@ -1,0 +1,67 @@
+.movie-explanation {
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid #424044;
+  font-size: 14px;
+}
+
+.movie-explanation > summary {
+  color: #ffbc98;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.explanation-intro {
+  margin: 14px 0;
+  color: #c5c3ca;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.explanation-member {
+  margin-top: 14px;
+  padding: 13px;
+  border: 1px solid #4b3e35;
+  border-radius: 10px;
+  background: #2b231d;
+}
+
+.explanation-member h4 {
+  margin: 0 0 10px;
+  color: #ffccad;
+  font-size: 14px;
+  overflow-wrap: anywhere;
+}
+
+.explanation-member ol {
+  margin: 0;
+  padding-left: 20px;
+  color: #f0e7df;
+}
+
+.explanation-member li {
+  margin: 8px 0;
+  padding-left: 3px;
+  font-size: 13px;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+.explanation-member p {
+  margin: 0;
+  color: #d2c6bc;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.explanation-note {
+  margin: 14px 0 0;
+  color: #b0aeb8;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.movie-explanation > summary:focus-visible {
+  outline: 2px solid #ffab85;
+  outline-offset: 4px;
+}
